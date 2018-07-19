@@ -1,0 +1,62 @@
+/* pages/modules/elecCostList/elecCostList.wxss */
+.view1{
+  margin-top:20rpx;margin-left:20rpx;
+}
+.text1{
+  font-size:35rpx;color:#2196F3;
+}
+.view2{
+  width: 25%;text-align:center;margin:auto;
+}
+.text2{
+  font-size:25rpx;color:#ffffff;
+}
+.text3{
+  font-size:25rpx;font-weight:600;color:#000000;
+}
+.view3{
+  width: 33%;text-align:center;margin:auto;
+}
+.view4{
+  display:flex;width:96%;height:80rpx;margin:auto;background-color: #d35400;
+}
+.view5{
+  display:flex;width:96%;height:80rpx;margin:auto;background-color: #fff;
+}
+.view6{
+  display:flex;width:96%;height:80rpx;margin:auto;background-color: #b2b2b2;
+}
+.myview{
+  width: 100%;
+  margin-top:150rpx;
+}
+.view{
+  display:flex;
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+  background-color: #fff;
+}
+.mybutton{
+  background-color: #fff;
+  font-size: 30rpx;
+  margin:auto;
+  color: #000000;
+  width: auto;
+  height: 60rpx;
+}
+.lastbutton{
+  background-color: #fff;
+  font-size: 25rpx;
+  width: auto;
+  height: 60rpx;
+}
+.nextbutton{
+  background-color: #fff;
+  font-size: 25rpx;
+  width: auto;
+  height: 60rpx;
+}
+.mybutton::after{ border: none; }
+.lastbutton::after{ border: none; }
+.nextbutton::after{ border: none; }

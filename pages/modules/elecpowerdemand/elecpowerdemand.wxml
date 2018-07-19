@@ -1,0 +1,28 @@
+<dialog id='dialog' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent" bind:showDialog="_showDialog">
+</dialog>
+<view class='view1'>
+  <view class='viewcolor' style='background-color: #F2CBA2;'></view>
+  <view>谷期</view>
+  <view class='viewcolor' style='background-color: #CEFAC4;'></view>
+  <view >平期</view>
+  <view class='viewcolor' style='background-color: #B7DBF7;'></view>
+  <view>峰期</view>
+</view>
+<view class='myview'>
+  <text class='mytext'>功率曲线</text>
+</view>
+<view class="echartview" style='display: {{flag}};'>
+  <ec-canvas id="mychart-dom-line1" canvas-id="mychart-line" ec="{{ ec1 }}"></ec-canvas>
+</view>
+<view class='myview1'>
+  <text class='mytext'>总功率因数</text>
+</view>
+<view class="echartview" style='display: {{flag}};'>
+  <ec-canvas id="mychart-dom-line2" canvas-id="mychart-line" ec="{{ ec2 }}"></ec-canvas>
+</view>
+<view class='myview1'>
+  <text class='mytext'>电量</text>
+</view>
+<view class="echartview" style='display: {{flag}};'>
+  <ec-canvas id="mychart-dom-line3" canvas-id="mychart-line" ec="{{ ec3 }}"></ec-canvas>
+</view>

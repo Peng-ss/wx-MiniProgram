@@ -1,0 +1,7 @@
+<dialog id='dialog' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent" bind:showDialog="_showDialog">
+</dialog>
+<selectdate  id="selectdate" bind:cancelDateEvent="_cancelDateEvent">
+</selectdate>
+<view class="echartview" style='display: {{flag}};'>
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}" ></ec-canvas>
+</view>

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "dialog": "/element/selectdialog/selectdialog",
+    "selectmonth": "/element/sleectmonth/sleectmonth"
+  },
+  "enablePullDownRefresh": true
+}

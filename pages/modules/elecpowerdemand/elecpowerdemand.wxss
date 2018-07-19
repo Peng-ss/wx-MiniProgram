@@ -1,0 +1,38 @@
+.echartview {
+  width: 100%;
+  height: 300px;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.view1{
+  margin-top: 80rpx;
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  text-align: center;
+}
+.viewcolor{
+  margin-left: 30rpx;
+  width: 25px;
+  height: 25px;
+}
+.myview{
+  width: 100%;
+  height: 50rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  background-color: #EEEEEE;
+}
+.myview1{
+  width: 100%;
+  height: 50rpx;
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+  background-color: #EEEEEE;
+}
+.mytext{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}

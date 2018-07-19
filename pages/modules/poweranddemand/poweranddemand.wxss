@@ -1,0 +1,12 @@
+.selectdate{
+  width: 300rpx;
+  height: 300rpx;
+}
+.echartview {
+  width: 100%;
+  height: 300px;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+
+<view class="container">
+  <text>系统登录</text>
+  <form bindsubmit="login"> 
+  <view class="section">
+    <input class="input" name="name" type="text" placeholder="账号/手机号"  />
+  </view>
+  <view class="section">
+    <input class="input"name="password" password="true" placeholder="密码"  />
+  </view>
+  <button  formType="submit">登录</button>
+  </form>
+</view>

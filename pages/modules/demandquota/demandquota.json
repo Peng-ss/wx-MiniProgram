@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "dialog": "/element/selectdialog/selectdialog",
+    "selectmonth": "/element/sleectmonth/sleectmonth",
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  },
+  "enablePullDownRefresh": true
+}

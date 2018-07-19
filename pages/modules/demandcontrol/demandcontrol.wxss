@@ -1,0 +1,76 @@
+.myview {
+  width: 100%;
+  margin-top: 80rpx; 
+}
+.view1 {
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  padding: 5rpx;
+}
+
+.view1-1 {
+  width: 50%;
+  height: 90rpx;
+}
+
+.view1-1-1 {
+  width: 100%;
+  height: 45rpx;
+  text-align: center;
+}
+
+.view1-1-2 {
+  width: 100%;
+  height: 45rpx;
+  text-align: center;
+}
+
+.view1-2 {
+  width: 50%;
+  height: 90rpx;
+}
+
+.view1-2-1 {
+  width: 100%;
+  height: 45rpx;
+  text-align: center;
+}
+
+.view1-2-2 {
+  width: 100%;
+  height: 45rpx;
+  text-align: center;
+}
+
+.mytext {
+  color: #a0a0a0;
+  font-size: 25rpx;
+}
+
+.contracttext {
+  color: #f1c40f;
+  font-size: 30rpx;
+}
+
+.surplustext {
+  color: #f03;
+  font-size: 30rpx;
+}
+
+.maxtext {
+  color: #339;
+  font-size: 30rpx;
+}
+
+.timetext {
+  font-size: 25rpx;
+}
+.echartview {
+  width: 100%;
+  height: 300px;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

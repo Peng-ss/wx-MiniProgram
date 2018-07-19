@@ -1,0 +1,43 @@
+<dialog id='dialog' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent" bind:showDialog="_showDialog">
+</dialog>
+<view class='myview'>
+  <view class='view1'>
+    <view class='view1-1'>
+      <view class='view1-1-1'>
+        <text class='mytext'>合同最大需量(KW)</text>
+      </view>
+      <view class='view1-1-2'>
+        <text class='contracttext'>{{contract_max_demand}}</text>
+      </view>
+    </view>
+    <view class='view1-2'>
+      <view class='view1-2-1'>
+        <text class='mytext'>剩余量(KW)</text>
+      </view>
+      <view class='view1-2-2'>
+        <text class='surplustext'>{{surplus_demand}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='view1'>
+    <view class='view1-1'>
+      <view class='view1-1-1'>
+        <text class='mytext'>本月最大需量(KW)</text>
+      </view>
+      <view class='view1-1-2'>
+        <text class='maxtext'>{{max_demand}}</text>
+      </view>
+    </view>
+    <view class='view1-2'>
+      <view class='view1-2-1'>
+        <text class='mytext'>发生时间</text>
+      </view>
+      <view class='view1-2-2'>
+        <text class='timetext'>{{demand_time}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="echartview" style='display: {{flag}};'>
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>

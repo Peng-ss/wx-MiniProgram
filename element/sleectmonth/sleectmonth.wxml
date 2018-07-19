@@ -1,0 +1,11 @@
+<view class='view'>
+  <view class="scroll_box">
+    <scroll-view class="scroll-view_x" scroll-x style="width: auto;overflow:hidden;">
+      <view class='myview'>
+        <view class="item_list" wx:for="{{mon}}"  wx:key="mon">
+          <view  data-datamon='{{item[0]}}' style='width:100%;height:40rpx;border-radius:3px;text-align:center;background-color:#{{item[2]}}; color: #{{item[3]}};' bindtap='_getbutton'>{{item[1]}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+.view{
+  display:flex;
+  width: 100%;
+  height: 65rpx;
+  position: fixed;
+  top: 80rpx;
+  background-color: #fff;
+}
+.scroll_box {
+  width: 100%;
+  height: 55rpx;
+  overflow: hidden;
+  background: #fff;
+  white-space: nowrap;
+  text-align: center;
+  padding: 5rpx;
+}
+
+.item_list {
+  width: 75rpx;
+  text-align: center;
+  display: inline-block;
+  font-size: 30rpx;
+  margin-left: 1px;
+}

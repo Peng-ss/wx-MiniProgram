@@ -1,0 +1,13 @@
+<dialog id='dialog' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent" bind:showDialog="_showDialog">
+</dialog>
+<yearmonthday id='yearmonthday' bind:getdate="_getdate" >
+</yearmonthday>
+<view class="echartview" style='display: {{flagday}};'>
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ecday }}"></ec-canvas>
+</view>
+<view class="echartview" style='display: {{flagmonth}};'>
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ecmonth }}"></ec-canvas>
+</view>
+<view class="echartview" style='display: {{flagyear}};'>
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ecyear }}"></ec-canvas>
+</view>

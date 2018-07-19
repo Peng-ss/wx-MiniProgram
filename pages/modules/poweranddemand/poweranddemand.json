@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "dialog": "/element/selectdialog/selectdialog",
+    "selectdate":"/element/selectdate/selectdate",
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  },
+  "enablePullDownRefresh": true
+}

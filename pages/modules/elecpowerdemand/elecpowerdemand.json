@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "dialog": "/element/selectdialog/selectdialog",
+    "ec-canvas": "../../../ec-canvas/ec-canvas"
+  },
+  "enablePullDownRefresh": true
+}

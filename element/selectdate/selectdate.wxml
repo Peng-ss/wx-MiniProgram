@@ -1,0 +1,42 @@
+<view class='bigview'>
+  <view class='myview' hidden="{{!isShow}}">
+    <view class='selectdate'>
+      <view class='viewbutton'>
+        <view class='datebutton' hover-class="hover" hover-stay-time="1000" catchtap="today">今天</view>
+        <view class='datebutton' hover-class="hover" hover-stay-time="1000" catchtap="yesterday">昨天</view>
+        <view class='datebutton' hover-class="hover" hover-stay-time="1000" catchtap="lastthreedays">最近三天</view>
+        <view class='datebutton' hover-class="hover" hover-stay-time="1000" catchtap="month">本月</view>
+      </view>
+      <view>
+        <text class='selecttext'>时间区间</text>
+      </view>
+      <view class='viewdate'>
+        <view class='date'>
+          <image class='img' src="/img/ic_date.png" mode="aspectFit"></image>
+          <picker class='picker' mode="date" value="{{nowdate}}" end="{{nowdate}}" bindchange="bindDate1Change">{{date1}}
+          </picker>
+        </view>
+        <view> - </view>
+        <view class='date'>
+          <image class='img' src="/img/ic_date.png" mode="aspectFit"></image>
+          <picker class='picker' mode="date" value="{{nowdate}}" end="{{nowdate}}" bindchange="bindDate2Change">{{date2}}
+          </picker>
+        </view>
+      </view>
+      <view class='wx-dialog-footer'>
+        <button class='btn_cancel' catchtap="btn_cancel">取消</button>
+        <button class='btn_confirm' data-fdate='{{date1}}' data-sdate='{{date2}}' catchtap="btn_confirm">确定</button>
+      </view>
+    </view>
+  </view>
+  <view class='view1' catchtap='showselectview'>
+    <view class='view2'>
+      <text class='text1'>{{dateconfirm.first}}</text>
+      <text class='text1'>至</text>
+      <text class='text1'>{{dateconfirm.second}}</text>
+    </view>
+    <view class='view3'>
+      <image class='img1' src="/img/ic_date.png" mode="aspectFit"></image>
+    </view>
+  </view>
+</view>

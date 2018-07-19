@@ -1,0 +1,13 @@
+<view class='myview'>
+  <radio-group class="radio-group" bindchange="radioChange">
+    <radio value="day" checked="true" />日
+    <radio value="month" checked="" />月
+    <radio value="year" checked="" />年
+  </radio-group>
+  <view class='view1'>
+    <image class='img' src="/img/ic_date.png" mode="aspectFit"></image>
+    <picker class="picker" mode="date" fields="{{dateType}}"  end="{{nowdate}}" bindchange="bindDateChange">
+        {{date}}
+    </picker>
+  </view>
+</view>

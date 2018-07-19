@@ -1,0 +1,153 @@
+.bigview{
+  width: 100%;
+  height: auto;
+  margin-top: 80rpx;
+}
+
+.mytext {
+  font-size: 30rpx;
+  color: #000;
+  width: auto;
+  text-align: center;
+}
+
+.timetext {
+  font-size: 25rpx;
+  color: #000;
+  width: auto;
+  text-align: center;
+}
+
+.time1 {
+  width: auto;
+  height: 40rpx;
+  text-align: center;
+}
+
+.time2 {
+  width: auto;
+  height: 40rpx;
+  text-align: center;
+}
+
+.myview {
+  width: 95%;
+  height: auto;
+  padding: 5rpx;
+  margin: auto;
+}
+
+.selectdate {
+  width: auto;
+  height: 300rpx;
+}
+
+.viewbutton {
+  display: flex;
+}
+
+.datebutton {
+  text-align: center;
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  font-weight: 800;
+  color: #444;
+  margin: 10rpx;
+}
+
+.hover {
+  text-align: center;
+  width: 150rpx;
+  height: 50rpx;
+  font-size: 30rpx;
+  font-weight: 800;
+  color: #3eadeb;
+  margin: 10rpx;
+}
+
+.selecttext {
+  margin: 10rpx;
+  font-size: 35rpx;
+  color: #000;
+}
+
+.viewdate {
+  margin: 10rpx;
+  display: flex;
+}
+
+.date {
+  display: flex;
+  width: 50%;
+  height: 60rpx;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.img {
+  width: 10%;
+  height: auto;
+  margin-left: 10rpx;
+}
+
+.picker {
+  width: 90%;
+  height: auto;
+  font-size: 25rpx;
+  margin: auto;
+}
+
+.wx-dialog-footer {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 10rpx;
+}
+
+.btn_confirm {
+  background-color: #2f7fc6;
+  font-size: 35rpx;
+  display: block;
+  -webkit-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.btn_cancel {
+  background-color: #c9e2f0;
+  display: block;
+  font-size: 35rpx;
+  -webkit-flex: 1;
+  flex: 1;
+  position: relative;
+}
+
+.view1 {
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+}
+
+.view2 {
+  width: 90%;
+  height: auto;
+  margin-left: 30rpx;
+}
+
+.view3 {
+  width: 10%;
+  height: auto;
+}
+
+.img1 {
+  width: 100%;
+  height: 25rpx;
+  margin: auto;
+}
+
+.text1 {
+  font-size: 25rpx;
+  margin: auto;
+  color: #707070;
+}

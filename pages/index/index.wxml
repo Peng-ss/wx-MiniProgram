@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view wx:for="{{CompanyGroup}}" wx:key="CompanyGroup" style='padding:10rpx;'>
+  <!--判断是否有数据  -->
+  <block wx:if="{{item.maxdemand}}">
+    <view style='width: 100%;height: 200rpx;border:1rpx solid #BDBDBD;border-radius:12rpx;'>
+      <view style="display:flex;height: 55rpx;margin-top:7.5rpx;">
+        <view style='width:80%;height:55rpx; text-align: left;margin-left:5rpx;'>
+          <text style='font-size:40rpx; font-weight:700;color:#2983C1;'>{{item.company_name}}</text>
+        </view>
+        <view style='width:20%;height:45rpx;background-color: #fff; text-align: right;margin-right:20rpx;margin-top:0rpx;'>
+          <text style='font-size:30rpx;color:#2983C1;' bindtap='details' data-companyName='{{item.company_name}}' data-companyId="{{item.id}}">查看详情</text>
+        </view>
+      </view>
+      <view style='height: 50rpx;'>
+        <view style='width:99%;height:55rpx;background-color: #fff; text-align: left;margin-left:5rpx;'>
+          <text style='font-size:35rpx;font-weight:550;color:#000;'>{{item.power_name}}</text>
+        </view>
+      </view>
+      <view style="display:flex;height: 45rpx;">
+        <view style='width:33%;height:55rpx; text-align: left;margin-left:5rpx;'>
+          <text style='font-size:25rpx;color:#666666;'>最大需量(KW)：</text>
+        </view>
+
+        <!--判断最大需量是否大于合同最大需量  -->
+        <block wx:if="{{item.contractMaxDemand&&item.maxdemand>item.contractMaxDemand}}">
+          <view style='width:33%;height:55rpx; text-align: left;margin-left:5rpx;'>
+            <text style='font-size:25rpx;font-weight:600;color:red;'>{{item.maxdemand}}</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view style='width:33%;height:55rpx; text-align: left;margin-left:5rpx;'>
+            <text style='font-size:25rpx;font-weight:600;color:#008000;'>{{item.maxdemand}}</text>
+          </view>
+        </block>
+
+        <view style='width:33%;height:45rpx;background-color: #fff; '>
+          <text style='font-size:25rpx;color:#666666;'>需量使用情况：</text>
+        </view>
+      </view>
+      <view style="display:flex;height: 45rpx;">
+        <view style='width:33%;height:55rpx; text-align: left;margin-left:5rpx;'>
+          <text style='font-size:25rpx;color:#666666;'>合同最大需量(KW)：</text>
+        </view>
+
+        <!--判断是否是否有合同最大需量的数值返回  -->
+        <block wx:if="{{item.contractMaxDemand}}">
+          <view style='width:33%;height:55rpx; text-align: left;margin-left:5rpx;'>
+            <text style='font-size:25rpx;font-weight:600;color:#D98C08;'>{{item.contractMaxDemand}}.0</text>
+          </view>
+          <view style='width:33%;height:45rpx;background-color: #fff; text-align: center;margin-right:5rpx;'>
+            <text style='font-size:25rpx;color:#008000;'>剩余{{item.percent}}</text>
+          </view>
+        </block>
+        <block wx:else>
+          <view style='width:33%;height:55rpx; text-align: left;margin-left:5rpx;'>
+            <text style='font-size:25rpx;color:#666666;'>----</text>
+          </view>
+          <view style='width:33%;height:45rpx;background-color: #fff; text-align: center;center;margin-right:5rpx;'>
+            <text style='font-size:25rpx;color:#666666;'>--</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </block>
+  
+</view>
+<view style='width:100%;height:40rpx;text-align: center;'><text style='font-size:30rpx;color:#9F9F9F'>{{tipText}}</text></view>

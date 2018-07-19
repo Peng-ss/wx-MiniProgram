@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/index/index",
+    "pages/home/home",
+    "pages/modules/demandcontrol/demandcontrol",
+    "pages/modules/poweranddemand/poweranddemand",
+    "pages/modules/elecpowerdemand/elecpowerdemand",
+    "pages/modules/elecCostList/elecCostList",
+    "pages/modules/demandquota/demandquota",
+    "pages/modules/elecquerystat/elecquerystat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2196F3",
+    "navigationBarTitleText": "智能化综合用电与负荷控制系统",
+    "navigationBarTextStyle": "white"
+  }
+}

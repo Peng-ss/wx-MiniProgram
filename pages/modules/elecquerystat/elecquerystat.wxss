@@ -1,0 +1,8 @@
+.echartview {
+  width: 100%;
+  height: 300px;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}

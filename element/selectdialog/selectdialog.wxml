@@ -1,0 +1,24 @@
+<view class='wx_dialog_container' hidden="{{!isShow}}" catchtouchmove="ture">
+  <view class='wx-mask'></view>
+  <view class='wx-dialog'>
+    <view class='wx-dialog-title'>{{ title }}</view>
+    <form bindsubmit="_confirmEvent">
+      <view class="wx-dialog-content">
+        <radio-group name="radiogroup">
+          <label class="radio" wx:for="{{content}}"  wx:key="content" style='width:95%;display:block;text-align:left;padding-left:10rpx;'>
+              <radio value="{{item.power_id}}" checked='false' />{{item.power_id}}:{{item.power_name}}
+          </label>
+        </radio-group>
+      </view>
+      <view class='wx-dialog-footer'>
+        <button class='wx-dialog-btn' catchtap='_cancelEvent'>{{ cancelText }}</button>
+        <button class='wx-dialog-btn' formType="submit">{{ confirmText }}</button>
+      </view>
+    </form>
+  </view>
+</view>
+<view class='view'>
+  <button class='lastbutton' disabled="{{lastbutton}}" data-powerid='{{power_id}}' bindtap='lastbutton'>{{last}}</button>
+  <button class='mybutton' bindtap="_showDialog">{{power_id}}:{{power_name}}</button>
+  <button class='nextbutton' disabled="{{nextbutton}}" data-powerid='{{power_id}}' bindtap='nextbutton'>{{next}}</button>
+</view>

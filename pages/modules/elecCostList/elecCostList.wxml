@@ -1,0 +1,240 @@
+<!--pages/modules/elecCostList/elecCostList.wxml-->
+<dialog id='dialog' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent">
+</dialog>
+<selectmonth id="selectmonth" bind:_getbutton="_getbutton">
+</selectmonth>
+<view class='myview'>
+  <view class='view1'>
+    <text class='text1'>基本电费明细</text>
+  </view>
+  <view class='view4'>
+    <view class='view2'>
+      <text class='text2'>计费方式</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>用电容量(kVA)</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>电价(元/kVA)</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>基本电费(元)</text>
+    </view>
+  </view>
+  <view class='view5'>
+    <view class='view2'>
+      <text class='text3'>容量</text>
+    </view>
+    <view class='view2'>
+      <text class='text3'>{{company[1][0]}}</text>
+    </view>
+    <block wx:if="{{basic_price}}">
+      <view class='view2'>
+        <text class='text3'>{{basic_price}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='view2'>
+        <text class='text3'>--</text>
+      </view>
+    </block>
+    <view class='view2'>
+      <text class='text3'>{{company[0][0]}}</text>
+    </view>
+  </view>
+
+  <view class='view1'>
+    <text class='text1'>电度电费明细</text>
+  </view>
+  <view class='view4'>
+    <view class='view2'>
+      <text class='text2'>项目</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>电量(kWh)</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>电价(元/kWh)</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>电费(元)</text>
+    </view>
+  </view>
+  <view class='view5'>
+    <view class='view2'>
+      <text class='text3'>峰期</text>
+    </view>
+    <view class='view2'>
+      <text class='text3'>{{company[1][1]}}</text>
+    </view>
+    <block wx:if="{{peak_price}}">
+      <view class='view2'>
+        <text class='text3'>{{peak_price}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='view2'>
+        <text class='text3'>--</text>
+      </view>
+    </block>
+    <view class='view2'>
+      <text class='text3'>{{company[0][1]}}</text>
+    </view>
+  </view>
+  <view class='view6'>
+    <view class='view2'>
+      <text class='text3'>平期</text>
+    </view>
+    <view class='view2'>
+      <text class='text3'>{{company[1][2]}}</text>
+    </view>
+    <block wx:if="{{flat_price}}">
+      <view class='view2'>
+        <text class='text3'>{{flat_price}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='view2'>
+        <text class='text3'>--</text>
+      </view>
+    </block>
+    <view class='view2'>
+      <text class='text3'>{{company[0][2]}}</text>
+    </view>
+  </view>
+  <view class='view5'>
+    <view class='view2'>
+      <text class='text3'>谷期</text>
+    </view>
+    <view class='view2'>
+      <text class='text3'>{{company[1][3]}}</text>
+    </view>
+    <block wx:if="{{valley_price}}">
+      <view class='view2'>
+        <text class='text3'>{{valley_price}}</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='view2'>
+        <text class='text3'>--</text>
+      </view>
+    </block>
+    <view class='view2'>
+      <text class='text3'>{{company[0][3]}}</text>
+    </view>
+  </view>
+
+  <view class='view1'>
+    <text class='text1'>功率因数调整费明细</text>
+  </view>
+  <view class='view4'>
+    <view class='view2'>
+      <text class='text2'>标准</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>本月平均功率因数</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>调整系数(%)</text>
+    </view>
+    <view class='view2'>
+      <text class='text2'>调整电费(元)</text>
+    </view>
+  </view>
+  <view class='view5'>
+    <view class='view2'>
+      <text class='text3'>0.9标准</text>
+    </view>
+    <view class='view2'>
+      <text class='text3'>{{company[1][4]}}</text>
+    </view>
+    <view class='view2'>
+      <text class='text3'>{{standard09_factor}}</text>
+    </view>
+    <view class='view2'>
+      <text class='text3'>{{company[0][4]}}</text>
+    </view>
+  </view>
+
+  <view class='view1'>
+    <text class='text1'>基本电费明细</text>
+  </view>
+  <view class='view4'>
+    <view class='view3'>
+      <text class='text2'>项目</text>
+    </view>
+    <view class='view3'>
+      <text class='text2'>费用(元)</text>
+    </view>
+    <view class='view3'>
+      <text class='text2'>占比(%)</text>
+    </view>
+  </view>
+  <view class='view5'>
+    <view class='view3'>
+      <text class='text3'>基本电费(元)</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{company[0][0]}}</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{basic_proportion}}</text>
+    </view>
+  </view>
+  <view class='view6'>
+    <view class='view3'>
+      <text class='text3'>峰期电费</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{company[0][1]}}</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{peak_proportion}}</text>
+    </view>
+  </view>
+  <view class='view5'>
+    <view class='view3'>
+      <text class='text3'>平期电费</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{company[0][2]}}</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{flat_elec_proportion}}</text>
+    </view>
+  </view>
+  <view class='view6'>
+    <view class='view3'>
+      <text class='text3'>谷期电费</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{company[0][3]}}</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{valley_elec_proportion}}</text>
+    </view>
+  </view>
+  <view class='view5'>
+    <view class='view3'>
+      <text class='text3'>功率因数调整电费</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{company[0][4]}}</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{coefficient_proportion}}</text>
+    </view>
+  </view>
+  <view class='view6'>
+    <view class='view3'>
+      <text class='text3'>总电费</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>{{company[0][5]}}</text>
+    </view>
+    <view class='view3'>
+      <text class='text3'>100%</text>
+    </view>
+  </view>
+
+</view>
